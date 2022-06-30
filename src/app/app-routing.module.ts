@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'notifs',
+    loadChildren: () => import('./notifs/notifs.module').then( m => m.NotifsPageModule)
+  },
 ];
 
 @NgModule({
